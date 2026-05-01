@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="script.js"></script>
+</head>
 
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="cv.html">CV</a>
+</nav>
+
+<section class="fade">
+<h2>Research Project</h2>
+
+<div class="card">
+<h3>MDR in ICU Pathogens</h3>
+<p>
+Systematic review of resistance patterns in South Asia.
+</p>
+</div>
+</section>
+
+<section class="fade">
+<h2>Sample Data Visualization</h2>
+<canvas id="chart"></canvas>
+</section>
+
+<script>
+new Chart(document.getElementById('chart'), {
+    type: 'bar',
+    data: {
+        labels: ['Pseudomonas', 'Acinetobacter'],
+        datasets: [{
+            label: 'Resistance %',
+            data: [75, 82]
+        }]
+    }
+});
+</script>
+
+</body>
+</html>
