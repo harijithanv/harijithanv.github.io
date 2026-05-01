@@ -5,46 +5,72 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vickneswaran Harijithan | Biomedical Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    background: #f7fbff;
     color: #333;
 }
 
 header {
-    background: #0a3d62;
+    background: linear-gradient(135deg, #0a3d62, #3c6382);
     color: white;
-    padding: 40px;
     text-align: center;
+    padding: 60px 20px;
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 header h1 {
-    margin: 0;
+    margin: 10px 0;
     font-size: 36px;
 }
 
 header p {
     font-size: 18px;
-    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: white;
+    color: #0a3d62;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 section {
-    padding: 40px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
+    padding: 50px 20px;
 }
 
 h2 {
     color: #0a3d62;
+    border-bottom: 3px solid #3c6382;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
 }
 
 .card {
-    background: #f4f8fb;
+    background: white;
     padding: 20px;
-    margin-top: 15px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 footer {
@@ -59,70 +85,86 @@ footer {
 <body>
 
 <header>
+    <img src="profile.jpg" alt="Profile Photo">
     <h1>Vickneswaran Harijithan</h1>
     <p>Biomedical Science Undergraduate | Future Medical Laboratory Scientist</p>
+    
+    <a href="cv.pdf" class="btn" download>Download CV</a>
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <p>
-        I am a Biomedical Science undergraduate at NSBM Green University with a strong
-        foundation in microbiology, immunology, and molecular biology.
-        I am passionate about clinical diagnostics, infectious diseases, and
-        antimicrobial resistance research.
-    </p>
+<h2>About Me</h2>
+<p>
+Biomedical Science undergraduate at NSBM Green University with strong training in microbiology, immunology, and molecular biology.  
+Interested in clinical diagnostics, infectious diseases, and antimicrobial resistance research.
+</p>
 </section>
 
 <section>
-    <h2>Skills</h2>
-    <div class="card">
-        <p>
-        • Microbial culturing<br>
-        • Gram staining & microscopy<br>
-        • Aseptic techniques<br>
-        • Basic PCR knowledge<br>
-        • Laboratory data analysis
-        </p>
-    </div>
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">
+<strong>Laboratory Skills</strong>
+<p>Microbial culturing, Gram staining, microscopy, aseptic techniques</p>
+</div>
+
+<div class="card">
+<strong>Technical Skills</strong>
+<p>Basic PCR, lab data analysis, quality control</p>
+</div>
+
+<div class="card">
+<strong>Professional Skills</strong>
+<p>Teamwork, time management, scientific communication</p>
+</div>
+</div>
 </section>
 
 <section>
-    <h2>Research & Academic Work</h2>
-    <div class="card">
-        <h3>Final Year Research Project</h3>
-        <p>
-        Comparative Multidrug Resistance in ICU Pathogens (South Asia)
-        </p>
-        <p>
-        • Analyzed resistance trends<br>
-        • Evaluated antibiotic effectiveness<br>
-        • Conducted systematic review
-        </p>
-    </div>
+<h2>Research & Projects</h2>
+<div class="card">
+<h3>Multidrug Resistance in ICU Pathogens</h3>
+<p>
+Systematic review of resistance patterns in Pseudomonas aeruginosa and Acinetobacter baumannii in South Asia.
+</p>
+<ul>
+<li>Analyzed resistance trends</li>
+<li>Evaluated antibiotic effectiveness</li>
+<li>Applied systematic review methodology</li>
+</ul>
+</div>
 </section>
 
 <section>
-    <h2>Experience</h2>
-    <div class="card">
-        <p>
-        • Performed microbiological culturing<br>
-        • Conducted staining & microscopy<br>
-        • Maintained aseptic lab conditions
-        </p>
-    </div>
+<h2>Publications</h2>
+<div class="card">
+<p>
+📌 *No publications yet* — Currently preparing research work for submission.
+</p>
+</div>
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <p>
-        Email: your email here<br>
-        LinkedIn: <a href="https://www.linkedin.com/in/vickneswaranharijithan/" target="_blank">
-        View Profile</a>
-    </p>
+<h2>Experience</h2>
+<div class="card">
+<ul>
+<li>Performed microbiological culturing</li>
+<li>Conducted staining and microscopy</li>
+<li>Maintained aseptic lab conditions</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>
+Email: your email<br>
+LinkedIn: <a href="https://www.linkedin.com/in/vickneswaranharijithan/" target="_blank">View Profile</a>
+</p>
 </section>
 
 <footer>
-    <p>© 2026 Vickneswaran Harijithan</p>
+<p>© 2026 Vickneswaran Harijithan</p>
 </footer>
 
 </body>
