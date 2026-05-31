@@ -1,13 +1,13 @@
-# Marvic Tele — Portfolio Website
+# Vickneswaran Harijithan — Portfolio Website
 
-A premium, production-ready personal portfolio for **Marvic Tele**, Final Year BSc (Hons) Biomedical Science at NSBM Green University.
+A premium, production-ready personal portfolio for **Vickneswaran Harijithan**, Final Year BSc (Hons) Biomedical Science at NSBM Green University.
 
 ---
 
 ## 📁 Folder Structure
 
 ```
-marvic-portfolio/
+Vickneswaran Harijithan/
 ├── index.html                  ← Main HTML (single page)
 ├── sitemap.xml                 ← SEO sitemap
 ├── robots.txt                  ← SEO robots file
@@ -44,12 +44,12 @@ marvic-portfolio/
 **Option A — GitHub Web UI (simplest):**
 1. Open your new repository
 2. Click **Add file → Upload files**
-3. Drag and drop the entire `marvic-portfolio/` folder contents (not the folder itself — its contents)
+3. Drag and drop the entire `Vickneswaran Harijithan/` folder contents (not the folder itself — its contents)
 4. Click **Commit changes**
 
 **Option B — Git CLI:**
 ```bash
-cd marvic-portfolio
+cd Vickneswaran Harijithan
 git init
 git add .
 git commit -m "Initial portfolio commit"
