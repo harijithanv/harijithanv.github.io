@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── SEO ── -->
+  <title>Marvic Tele | Biomedical Science Researcher · NSBM Green University</title>
+  <meta name="description" content="Portfolio of Marvic Tele – Final Year BSc (Hons) Biomedical Science student at NSBM Green University. Researcher in Antimicrobial Resistance, Systematic Reviews, and Molecular Biology." />
+  <meta name="keywords" content="Marvic Tele, Biomedical Science, Antimicrobial Resistance, Systematic Review, NSBM, Researcher, Molecular Biology, Sri Lanka" />
+  <meta name="author" content="Marvic Tele" />
+  <link rel="canonical" href="https://yourusername.github.io/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/" />
+  <meta property="og:title" content="Marvic Tele | Biomedical Science Researcher" />
+  <meta property="og:description" content="Final Year BSc (Hons) Biomedical Science · Antimicrobial Resistance Researcher · Future MSc Candidate" />
+  <meta property="og:image" content="assets/images/og-image.png" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marvic Tele | Biomedical Science Researcher" />
+  <meta name="twitter:description" content="Final Year BSc (Hons) Biomedical Science · Antimicrobial Resistance Researcher · Future MSc Candidate" />
+  <meta name="twitter:image" content="assets/images/og-image.png" />
+
+  <!-- ── Preconnect ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ── Fonts ── -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- ── External Libraries ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" />
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- ── Favicon placeholder ── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>" />
+</head>
+<body class="light-mode" data-scroll="0">
+
+  <!-- ════════════════════════ CUSTOM CURSOR ════════════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ════════════════════════ SCROLL PROGRESS ═════════════════════ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ════════════════════════ NAVIGATION ══════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Marvic Tele Home">
+        <span class="logo-text">MT</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#publications" class="nav-link">Publications</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" aria-pressed="false">
+          <span class="theme-icon sun"><i class="fas fa-sun"></i></span>
+          <span class="theme-icon moon"><i class="fas fa-moon"></i></span>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════ HERO ════════════════════════════════ -->
+  <section id="hero" class="hero-section" role="banner">
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- DNA helix (CSS animated) -->
+    <div class="dna-helix" aria-hidden="true">
+      <div class="dna-strand strand-a"></div>
+      <div class="dna-strand strand-b"></div>
+      <div class="dna-rungs" id="dnaRungs"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+        <span class="badge-dot"></span>
+        Available for Research Collaborations
+      </div>
+
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        Hi, I'm <span class="name-highlight">Marvic Tele</span>
+      </h1>
+
+      <div class="hero-typed-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <span class="typed-prefix">I am a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        Final Year BSc (Hons) Biomedical Science · NSBM Green University<br />
+        Specialising in Antimicrobial Resistance &amp; Systematic Reviews
+      </p>
+
+      <div class="hero-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <a href="#research" class="btn btn-primary">
+          <i class="fas fa-flask"></i> View Research
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+        <a href="assets/Marvic_Tele_CV.pdf" class="btn btn-ghost" download aria-label="Download CV PDF">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+
+      <div class="hero-stats" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+        <div class="hero-stat">
+          <span class="stat-num" data-count="450">0</span><span>+</span>
+          <span class="stat-label">Articles Screened</span>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">Research Projects</span>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Years at NSBM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile image -->
+    <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <div class="profile-frame">
+        <div class="profile-ring ring-1" aria-hidden="true"></div>
+        <div class="profile-ring ring-2" aria-hidden="true"></div>
+        <div class="profile-ring ring-3" aria-hidden="true"></div>
+        <div class="profile-img-wrap">
+          <!-- Replace src with your actual photo -->
+          <img
+            src="assets/images/profile.jpg"
+            alt="Marvic Tele – Biomedical Science Researcher"
+            class="profile-img"
+            onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'400\' height=\'400\' fill=\'%230a1628\'/><circle cx=\'200\' cy=\'150\' r=\'80\' fill=\'%23163a5f\'/><rect x=\'80\' y=\'250\' width=\'240\' height=\'200\' rx=\'120\' fill=\'%23163a5f\'/><text x=\'200\' y=\'360\' text-anchor=\'middle\' fill=\'%2364b5c4\' font-size=\'18\' font-family=\'sans-serif\'>Marvic Tele</text></svg>'"
+          />
+        </div>
+        <!-- Floating badges -->
+        <div class="float-badge badge-top-right">
+          <i class="fas fa-dna"></i> AMR Researcher
+        </div>
+        <div class="float-badge badge-bottom-left">
+          <i class="fas fa-microscope"></i> Biomedical Science
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+      <span class="scroll-hint-text">Scroll</span>
+      <span class="scroll-hint-arrow" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title" id="about-heading">Driven by Science,<br /><em>Defined by Curiosity</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Bio -->
+        <div class="about-bio" data-aos="fade-right" data-aos-delay="100">
+          <p class="about-lead">I am a final-year Biomedical Science undergraduate with a deep passion for antimicrobial resistance research, molecular biology, and evidence-based medicine.</p>
+          <p>Currently completing my BSc (Hons) at NSBM Green University, I have developed expertise in systematic review methodology, microbiology, and scientific communication. My research focuses on the comparative multidrug resistance profiles of <em>Pseudomonas aeruginosa</em> and <em>Acinetobacter baumannii</em> in ICU settings across South Asia.</p>
+          <p>I aspire to pursue an MSc in Molecular Biology or Biotechnology internationally — with a particular interest in Australian research institutions — and contribute to global efforts in combating antimicrobial resistance.</p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <i class="fas fa-microscope" aria-hidden="true"></i>
+              <span>Lab Science</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <span>Systematic Review</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
+              <span>Data Analysis</span>
+            </div>
+            <div class="pillar">
+              <i class="fas fa-pen-nib" aria-hidden="true"></i>
+              <span>Science Writing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="about-timeline" data-aos="fade-left" data-aos-delay="200">
+          <h3 class="timeline-heading">Academic Journey</h3>
+          <ol class="timeline" role="list">
+            <li class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <span class="tl-year">2019</span>
+                <strong>Advanced Level Sciences</strong>
+                <p>Biology, Chemistry, Physics — laying the scientific foundation.</p>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <span class="tl-year">2021</span>
+                <strong>BSc (Hons) Biomedical Science — Enrolled</strong>
+                <p>NSBM Green University, Sri Lanka. Began core modules in microbiology, biochemistry, and clinical science.</p>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <span class="tl-year">2023</span>
+                <strong>Research Experience</strong>
+                <p>Initiated systematic review on AMR in ICU settings. Screened 450+ articles using PRISMA methodology.</p>
+              </div>
+            </li>
+            <li class="tl-item">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <span class="tl-year">2024</span>
+                <strong>Conference Presentation</strong>
+                <p>Presented poster on Emerging Antibiotic Resistance in Gram-Negative Bacteria.</p>
+              </div>
+            </li>
+            <li class="tl-item tl-future">
+              <div class="tl-dot" aria-hidden="true"></div>
+              <div class="tl-content">
+                <span class="tl-year">2025+</span>
+                <strong>MSc Journey Begins</strong>
+                <p>Targeting MSc Molecular Biology / Biotechnology — Australia &amp; International.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Animated counters -->
+      <div class="stats-row" role="region" aria-label="Research statistics">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="stat-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
+          <div class="stat-value counter" data-target="2">0</div>
+          <div class="stat-desc">Research Projects</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+          <div class="stat-value counter" data-target="450">0</div>
+          <div class="stat-desc">Articles Screened</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></div>
+          <div class="stat-value counter" data-target="2">0</div>
+          <div class="stat-desc">Conference Presentations</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <div class="stat-value counter" data-target="8">0</div>
+          <div class="stat-desc">Certifications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ RESEARCH ════════════════════════════ -->
+  <section id="research" class="section research-section" aria-labelledby="research-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Research</span>
+        <h2 class="section-title" id="research-heading">Scientific Investigations &amp;<br /><em>Evidence-Based Work</em></h2>
+      </div>
+
+      <div class="research-grid">
+
+        <!-- Project 1 -->
+        <article class="research-card card-featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="research-card-header">
+            <div class="rcard-badge">Systematic Review</div>
+            <div class="rcard-year">2023–2024</div>
+          </div>
+          <h3 class="rcard-title">Comparative Multidrug Resistance Profiles of <em>P. aeruginosa</em> and <em>A. baumannii</em> in ICU Settings in South Asia</h3>
+          <p class="rcard-desc">A comprehensive PRISMA-guided systematic review examining antimicrobial resistance patterns in critical care environments across South Asian healthcare systems.</p>
+
+          <!-- PRISMA mini-infographic -->
+          <div class="prisma-flow" aria-label="PRISMA screening flowchart">
+            <div class="prisma-step">
+              <span class="prisma-num">450+</span>
+              <span class="prisma-label">Articles Identified</span>
+            </div>
+            <div class="prisma-arrow" aria-hidden="true">↓</div>
+            <div class="prisma-step">
+              <span class="prisma-num">~180</span>
+              <span class="prisma-label">After Screening</span>
+            </div>
+            <div class="prisma-arrow" aria-hidden="true">↓</div>
+            <div class="prisma-step">
+              <span class="prisma-num">25</span>
+              <span class="prisma-label">Studies Included</span>
+            </div>
+          </div>
+
+          <ul class="rcard-tags">
+            <li>PRISMA</li>
+            <li>AMR</li>
+            <li>ICU</li>
+            <li>South Asia</li>
+            <li>Gram-Negative</li>
+          </ul>
+
+          <div class="rcard-actions">
+            <button class="rbtn rbtn-outline" onclick="showAbstract('amr-review')">
+              <i class="fas fa-book-open"></i> Abstract
+            </button>
+            <button class="rbtn rbtn-ghost">
+              <i class="fas fa-quote-right"></i> Cite
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="research-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="research-card-header">
+            <div class="rcard-badge">Review Article · Poster</div>
+            <div class="rcard-year">2024</div>
+          </div>
+          <h3 class="rcard-title">Emerging Antibiotic Resistance in Gram-Negative Bacteria: Mechanisms, Epidemiology &amp; Therapeutic Challenges</h3>
+          <p class="rcard-desc">An in-depth review of resistance mechanisms in clinically critical gram-negative organisms, presented as a research poster at a national conference.</p>
+
+          <div class="conference-badge">
+            <i class="fas fa-award" aria-hidden="true"></i>
+            <span>Conference Poster Presentation</span>
+          </div>
+
+          <ul class="rcard-tags">
+            <li>Antibiotic Resistance</li>
+            <li>Mechanisms</li>
+            <li>Epidemiology</li>
+            <li>Therapeutics</li>
+          </ul>
+
+          <div class="rcard-actions">
+            <button class="rbtn rbtn-outline" onclick="showAbstract('gram-negative')">
+              <i class="fas fa-book-open"></i> Abstract
+            </button>
+            <button class="rbtn rbtn-ghost">
+              <i class="fas fa-quote-right"></i> Cite
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract Modal -->
+  <div class="modal-overlay" id="abstractModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <h3 id="modalTitle" class="modal-title"></h3>
+      <p id="modalBody" class="modal-body"></p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════ SKILLS ══════════════════════════════ -->
+  <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title" id="skills-heading">Technical Expertise &amp;<br /><em>Scientific Toolkit</em></h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-cat-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
+          <h3>Laboratory Skills</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Microbiology</span><div class="skill-bar"><div class="skill-fill" data-width="92" style="--w:92%"></div></div><span class="skill-pct">92%</span></li>
+            <li><span class="skill-name">Molecular Biology</span><div class="skill-bar"><div class="skill-fill" data-width="85" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+            <li><span class="skill-name">Histology</span><div class="skill-bar"><div class="skill-fill" data-width="80" style="--w:80%"></div></div><span class="skill-pct">80%</span></li>
+            <li><span class="skill-name">Clinical Lab Science</span><div class="skill-bar"><div class="skill-fill" data-width="88" style="--w:88%"></div></div><span class="skill-pct">88%</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-cat-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
+          <h3>Research Skills</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Systematic Reviews</span><div class="skill-bar"><div class="skill-fill" data-width="90" style="--w:90%"></div></div><span class="skill-pct">90%</span></li>
+            <li><span class="skill-name">PRISMA Methodology</span><div class="skill-bar"><div class="skill-fill" data-width="88" style="--w:88%"></div></div><span class="skill-pct">88%</span></li>
+            <li><span class="skill-name">Literature Screening</span><div class="skill-bar"><div class="skill-fill" data-width="93" style="--w:93%"></div></div><span class="skill-pct">93%</span></li>
+            <li><span class="skill-name">Quality Assessment</span><div class="skill-bar"><div class="skill-fill" data-width="85" style="--w:85%"></div></div><span class="skill-pct">85%</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-cat-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+          <h3>Software</h3>
+          <div class="soft-skills-grid">
+            <div class="soft-skill"><i class="fas fa-filter" aria-hidden="true"></i><span>Rayyan</span></div>
+            <div class="soft-skill"><i class="fas fa-chart-line" aria-hidden="true"></i><span>GraphPad Prism</span></div>
+            <div class="soft-skill"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>SPSS</span></div>
+            <div class="soft-skill"><i class="fas fa-r-project" aria-hidden="true"></i><span>R</span></div>
+            <div class="soft-skill"><i class="fas fa-book" aria-hidden="true"></i><span>Mendeley</span></div>
+            <div class="soft-skill"><i class="fas fa-file-word" aria-hidden="true"></i><span>MS Office</span></div>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-cat-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+          <h3>Programming</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" data-width="55" style="--w:55%"></div></div><span class="skill-pct">55%</span></li>
+            <li><span class="skill-name">Data Analysis</span><div class="skill-bar"><div class="skill-fill" data-width="70" style="--w:70%"></div></div><span class="skill-pct">70%</span></li>
+            <li><span class="skill-name">Statistical Modelling</span><div class="skill-bar"><div class="skill-fill" data-width="72" style="--w:72%"></div></div><span class="skill-pct">72%</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ EXPERIENCE ══════════════════════════ -->
+  <section id="experience" class="section experience-section" aria-labelledby="exp-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Experience</span>
+        <h2 class="section-title" id="exp-heading">Professional &amp;<br /><em>Research Experience</em></h2>
+      </div>
+
+      <ol class="exp-timeline" role="list">
+
+        <li class="exp-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="exp-marker" aria-hidden="true"><i class="fas fa-flask"></i></div>
+          <div class="exp-card">
+            <div class="exp-meta">
+              <span class="exp-role">Research Assistant</span>
+              <span class="exp-org">Biomedical Research Group</span>
+              <span class="exp-period">2023 – Present</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Conducted systematic literature screening of 450+ articles for AMR review</li>
+              <li>Applied PRISMA inclusion/exclusion criteria to identify 25 eligible studies</li>
+              <li>Performed quality assessment using standardised critical appraisal tools</li>
+              <li>Co-authored research poster on gram-negative antibiotic resistance</li>
+            </ul>
+            <div class="exp-tags"><span>Systematic Review</span><span>PRISMA</span><span>AMR</span></div>
+          </div>
+        </li>
+
+        <li class="exp-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="exp-marker" aria-hidden="true"><i class="fas fa-fish"></i></div>
+          <div class="exp-card">
+            <div class="exp-meta">
+              <span class="exp-role">Volunteer Researcher</span>
+              <span class="exp-org">Ocean Biome Initiative</span>
+              <span class="exp-period">2022 – 2023</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Participated in marine environmental monitoring activities</li>
+              <li>Contributed to biodiversity data collection and documentation</li>
+              <li>Developed field sampling and data recording competencies</li>
+            </ul>
+            <div class="exp-tags"><span>Marine Science</span><span>Field Research</span></div>
+          </div>
+        </li>
+
+        <li class="exp-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="exp-marker" aria-hidden="true"><i class="fas fa-bullhorn"></i></div>
+          <div class="exp-card">
+            <div class="exp-meta">
+              <span class="exp-role">Media Head</span>
+              <span class="exp-org">ICCE — International Conference on Clinical Excellence</span>
+              <span class="exp-period">2023</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Led digital media and communications strategy for national conference</li>
+              <li>Produced scientific communication content for social and print media</li>
+              <li>Coordinated visual branding and documentation</li>
+            </ul>
+            <div class="exp-tags"><span>Science Communication</span><span>Media</span><span>Leadership</span></div>
+          </div>
+        </li>
+
+        <li class="exp-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="exp-marker" aria-hidden="true"><i class="fas fa-hands-helping"></i></div>
+          <div class="exp-card">
+            <div class="exp-meta">
+              <span class="exp-role">Active Member &amp; Volunteer</span>
+              <span class="exp-org">Leo Club</span>
+              <span class="exp-period">2021 – Present</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Organised community health awareness programs</li>
+              <li>Conducted science education outreach activities</li>
+              <li>Demonstrated leadership, teamwork, and community service</li>
+            </ul>
+            <div class="exp-tags"><span>Leadership</span><span>Community</span><span>Health Awareness</span></div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ PUBLICATIONS ════════════════════════ -->
+  <section id="publications" class="section pub-section" aria-labelledby="pub-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Publications &amp; Conferences</span>
+        <h2 class="section-title" id="pub-heading">Academic Output &amp;<br /><em>Scholarly Contributions</em></h2>
+      </div>
+
+      <div class="pub-grid">
+
+        <div class="pub-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="pub-type-badge">Poster Presentation</div>
+          <h3 class="pub-title">Emerging Antibiotic Resistance in Gram-Negative Bacteria: Mechanisms, Epidemiology and Therapeutic Challenges</h3>
+          <p class="pub-authors">Tele, M. et al.</p>
+          <p class="pub-venue">National Undergraduate Research Conference · 2024</p>
+          <div class="pub-actions">
+            <button class="pub-btn"><i class="fas fa-external-link-alt"></i> DOI</button>
+            <button class="pub-btn"><i class="fas fa-file-pdf"></i> PDF</button>
+            <button class="pub-btn" onclick="copyBibtex()"><i class="fas fa-quote-right"></i> Cite</button>
+          </div>
+        </div>
+
+        <div class="pub-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pub-type-badge pub-type-review">Systematic Review</div>
+          <h3 class="pub-title">Comparative Multidrug Resistance Profiles of <em>P. aeruginosa</em> and <em>A. baumannii</em> in ICU Settings in South Asia</h3>
+          <p class="pub-authors">Tele, M. et al.</p>
+          <p class="pub-venue">In Preparation · 2024–2025</p>
+          <div class="pub-actions">
+            <button class="pub-btn" disabled><i class="fas fa-external-link-alt"></i> Pending</button>
+            <button class="pub-btn"><i class="fas fa-file-pdf"></i> Preprint</button>
+            <button class="pub-btn"><i class="fas fa-quote-right"></i> Cite</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ EDUCATION ═══════════════════════════ -->
+  <section id="education" class="section edu-section" aria-labelledby="edu-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Education</span>
+        <h2 class="section-title" id="edu-heading">Academic Foundation &amp;<br /><em>Future Aspirations</em></h2>
+      </div>
+
+      <div class="edu-grid">
+
+        <div class="edu-card edu-active" data-aos="fade-up" data-aos-delay="0">
+          <div class="edu-icon"><i class="fas fa-university" aria-hidden="true"></i></div>
+          <div class="edu-info">
+            <div class="edu-status">Current</div>
+            <h3>BSc (Hons) Biomedical Science</h3>
+            <p class="edu-inst">NSBM Green University</p>
+            <p class="edu-period">2021 – 2025 (Expected)</p>
+            <p class="edu-detail">Final Year · Specialisation: Microbiology &amp; Molecular Biology · Research-track final year project in AMR systematic review</p>
+          </div>
+        </div>
+
+        <div class="edu-card edu-future" data-aos="fade-up" data-aos-delay="150">
+          <div class="edu-icon"><i class="fas fa-atom" aria-hidden="true"></i></div>
+          <div class="edu-info">
+            <div class="edu-status edu-status-future">Future Goal</div>
+            <h3>MSc Molecular Biology / Biotechnology</h3>
+            <p class="edu-inst">International University (Target: Australia)</p>
+            <p class="edu-period">2025–2026 (Planned)</p>
+            <p class="edu-detail">Targeting internationally renowned research-focused programmes in molecular biology, biomedical research, or antimicrobial pharmacology.</p>
+          </div>
+        </div>
+
+        <div class="edu-card edu-future" data-aos="fade-up" data-aos-delay="300">
+          <div class="edu-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
+          <div class="edu-info">
+            <div class="edu-status edu-status-future">Long-term Vision</div>
+            <h3>PhD in Biomedical Research</h3>
+            <p class="edu-inst">International Research Institution</p>
+            <p class="edu-period">2027+ (Aspirational)</p>
+            <p class="edu-detail">Conducting independent research in antimicrobial resistance, contributing to WHO global action plan on AMR.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ CERTIFICATIONS ══════════════════════ -->
+  <section id="certifications" class="section cert-section" aria-labelledby="cert-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Certifications</span>
+        <h2 class="section-title" id="cert-heading">Continuous Learning &amp;<br /><em>Professional Development</em></h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="cert-icon"><i class="fas fa-vial" aria-hidden="true"></i></div>
+          <div class="cert-cat">Laboratory</div>
+          <p>Good Laboratory Practice &amp; Biosafety</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="80">
+          <div class="cert-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
+          <div class="cert-cat">Research</div>
+          <p>Systematic Review &amp; Meta-Analysis</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="160">
+          <div class="cert-icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></div>
+          <div class="cert-cat">Statistics</div>
+          <p>Biostatistics &amp; Statistical Computing</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="240">
+          <div class="cert-icon"><i class="fas fa-dna" aria-hidden="true"></i></div>
+          <div class="cert-cat">Biotechnology</div>
+          <p>Molecular Techniques in Biotechnology</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="320">
+          <div class="cert-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+          <div class="cert-cat">AI in Research</div>
+          <p>AI Tools for Scientific Literature Review</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="cert-icon"><i class="fas fa-heartbeat" aria-hidden="true"></i></div>
+          <div class="cert-cat">Clinical</div>
+          <p>Clinical Microbiology &amp; Infection Control</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="480">
+          <div class="cert-icon"><i class="fas fa-pen-alt" aria-hidden="true"></i></div>
+          <div class="cert-cat">Communication</div>
+          <p>Scientific Writing &amp; Publishing</p>
+        </div>
+        <div class="cert-card" data-aos="zoom-in" data-aos-delay="560">
+          <div class="cert-icon"><i class="fas fa-globe" aria-hidden="true"></i></div>
+          <div class="cert-cat">Leadership</div>
+          <p>Research Ethics &amp; Integrity</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ GALLERY ═════════════════════════════ -->
+  <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Gallery</span>
+        <h2 class="section-title" id="gallery-heading">Research Moments &amp;<br /><em>Scientific Visualisations</em></h2>
+      </div>
+
+      <div class="masonry-grid" id="masonryGrid">
+        <!-- Gallery items — replace SVG placeholders with real images -->
+        <a href="assets/images/gallery/poster1.jpg" class="glightbox masonry-item" data-gallery="research" data-title="AMR Research Poster · 2024" data-description="Emerging Antibiotic Resistance in Gram-Negative Bacteria">
+          <div class="gallery-placeholder gp-tall" style="--hue:195">
+            <i class="fas fa-microscope" aria-hidden="true"></i>
+            <span>Research Poster</span>
+          </div>
+        </a>
+        <a href="assets/images/gallery/lab1.jpg" class="glightbox masonry-item" data-gallery="research" data-title="Laboratory Work">
+          <div class="gallery-placeholder" style="--hue:160">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <span>Lab Work</span>
+          </div>
+        </a>
+        <a href="assets/images/gallery/prisma.jpg" class="glightbox masonry-item" data-gallery="research" data-title="PRISMA Flowchart">
+          <div class="gallery-placeholder" style="--hue:210">
+            <i class="fas fa-project-diagram" aria-hidden="true"></i>
+            <span>PRISMA Flow</span>
+          </div>
+        </a>
+        <a href="assets/images/gallery/conf1.jpg" class="glightbox masonry-item" data-gallery="research" data-title="Conference Presentation">
+          <div class="gallery-placeholder gp-wide" style="--hue:180">
+            <i class="fas fa-award" aria-hidden="true"></i>
+            <span>Conference 2024</span>
+          </div>
+        </a>
+        <a href="assets/images/gallery/lab2.jpg" class="glightbox masonry-item" data-gallery="research" data-title="Microbiology Lab">
+          <div class="gallery-placeholder gp-tall" style="--hue:155">
+            <i class="fas fa-bacteria" aria-hidden="true"></i>
+            <span>Microbiology</span>
+          </div>
+        </a>
+        <a href="assets/images/gallery/infographic.jpg" class="glightbox masonry-item" data-gallery="research" data-title="Scientific Infographic">
+          <div class="gallery-placeholder" style="--hue:200">
+            <i class="fas fa-chart-pie" aria-hidden="true"></i>
+            <span>Data Visualisation</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ ACHIEVEMENTS ════════════════════════ -->
+  <section id="achievements" class="section achieve-section" aria-labelledby="achieve-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Achievements</span>
+        <h2 class="section-title" id="achieve-heading">Milestones &amp;<br /><em>Accomplishments</em></h2>
+      </div>
+
+      <div class="achieve-grid">
+        <div class="achieve-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="achieve-icon"><i class="fas fa-file-medical-alt" aria-hidden="true"></i></div>
+          <div class="achieve-val counter" data-target="450">0</div>
+          <div class="achieve-label">Research Papers Reviewed</div>
+        </div>
+        <div class="achieve-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="achieve-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+          <div class="achieve-val counter" data-target="25">0</div>
+          <div class="achieve-label">Studies Included in Review</div>
+        </div>
+        <div class="achieve-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="achieve-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></div>
+          <div class="achieve-val counter" data-target="2">0</div>
+          <div class="achieve-label">Conference Presentations</div>
+        </div>
+        <div class="achieve-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="achieve-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <div class="achieve-val counter" data-target="8">0</div>
+          <div class="achieve-label">Certificates Earned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ CONTACT ═════════════════════════════ -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title" id="contact-heading">Let's Connect &amp;<br /><em>Collaborate</em></h2>
+        <p class="contact-intro">Open to research collaborations, MSc opportunities, lab positions, and academic discussions.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-links" data-aos="fade-right" data-aos-delay="100">
+          <a href="mailto:marvic.tele@example.com" class="contact-link" aria-label="Email Marvic Tele">
+            <div class="cl-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+            <div class="cl-info">
+              <span class="cl-platform">Email</span>
+              <span class="cl-value">marvic.tele@example.com</span>
+            </div>
+            <i class="fas fa-arrow-right cl-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marvictele" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn profile">
+            <div class="cl-icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+            <div class="cl-info">
+              <span class="cl-platform">LinkedIn</span>
+              <span class="cl-value">linkedin.com/in/marvictele</span>
+            </div>
+            <i class="fas fa-arrow-right cl-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="ORCID profile">
+            <div class="cl-icon"><i class="fab fa-orcid" aria-hidden="true"></i></div>
+            <div class="cl-info">
+              <span class="cl-platform">ORCID</span>
+              <span class="cl-value">0000-0000-0000-0000</span>
+            </div>
+            <i class="fas fa-arrow-right cl-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Google Scholar profile">
+            <div class="cl-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+            <div class="cl-info">
+              <span class="cl-platform">Google Scholar</span>
+              <span class="cl-value">Scholar Profile</span>
+            </div>
+            <i class="fas fa-arrow-right cl-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.researchgate.net" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="ResearchGate profile">
+            <div class="cl-icon"><i class="fab fa-researchgate" aria-hidden="true"></i></div>
+            <div class="cl-info">
+              <span class="cl-platform">ResearchGate</span>
+              <span class="cl-value">ResearchGate Profile</span>
+            </div>
+            <i class="fas fa-arrow-right cl-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/marvictele" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub profile">
+            <div class="cl-icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+            <div class="cl-info">
+              <span class="cl-platform">GitHub</span>
+              <span class="cl-value">github.com/marvictele</span>
+            </div>
+            <i class="fas fa-arrow-right cl-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="contact-visual" data-aos="fade-left" data-aos-delay="200" aria-hidden="true">
+          <div class="contact-molecule" id="contactMolecule"></div>
+          <div class="contact-tagline">
+            <p>"Science is not only a disciple of reason but also one of romance and passion."</p>
+            <cite>— Stephen Hawking</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">MT</span>
+        <span class="footer-name">Marvic Tele</span>
+        <span class="footer-tagline">Biomedical Science · NSBM Green University</span>
+      </div>
+      <p class="footer-copy">© <span id="footerYear"></span> Marvic Tele. Built with passion for science.</p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════ BACK TO TOP ═════════════════════════ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ════════════════════════ SCRIPTS ════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
