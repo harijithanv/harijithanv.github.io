@@ -1,5 +1,5 @@
 /**
- * MARVIC TELE PORTFOLIO — script.js
+ * VICKNESWARAN HARIJITHAN — script.js
  * Handles: particles, typed text, custom cursor, AOS, counters,
  *          skill bars, nav scroll, theme toggle, DNA animation,
  *          molecule visualization, modal, GLightbox, GSAP scroll effects
