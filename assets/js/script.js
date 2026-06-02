@@ -1,5 +1,5 @@
 /**
- * MARVIC TELE PORTFOLIO — script.js
+ * VICKNESWARAN HARIJITHAN PORTFOLIO — script.js
  * Handles: particles, typed text, custom cursor, AOS, counters,
  *          skill bars, nav scroll, theme toggle, DNA animation,
  *          molecule visualization, modal, GLightbox, GSAP scroll effects
@@ -98,10 +98,22 @@ function initTyped() {
 ════════════════════════════════════════════════════════ */
 function initHeroStats() {
   const nums = qsa('.stat-num[data-count]');
-  nums.forEach(el => {
-    const target = +el.dataset.count;
-    animateCount(el, 0, target, 1500);
-  });
+  if (!nums.length) return;
+
+  // Use IntersectionObserver so counters fire when hero is visible
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      if (el.dataset.animated) return;
+      el.dataset.animated = '1';
+      const target = +el.dataset.count;
+      animateCount(el, 0, target, 1500);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  nums.forEach(n => obs.observe(n));
 }
 
 function animateCount(el, start, end, duration) {
