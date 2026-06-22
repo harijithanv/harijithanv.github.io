@@ -59,14 +59,13 @@ function initTyped() {
   if (!el) return;
 
   const words = [
-    'Biomedical Scientist',
-    'Researcher',
-    'Future Molecular Biologist',
-    'Systematic Reviewer',
-    'Science Communicator',
-    'Data Analyst',
-    'AMR Researcher',
-  ];
+ "Biomedical Scientist",
+ "Junior Medical Laboratory Technologist",
+ "Antimicrobial Resistance Researcher",
+ "Systematic Reviewer",
+ "Future Molecular Biologist",
+ "Science Communicator"
+];
 
   let wordIdx = 0, charIdx = 0, deleting = false;
 
